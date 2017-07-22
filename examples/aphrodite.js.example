@@ -1,0 +1,29 @@
+import React from "react";
+import { StyleSheet, css } from "aphrodite";
+
+const styles = StyleSheet.create({
+  container: {
+    fontFamily: "'Press Start 2P', cursive",
+    padding: "2rem",
+    color: "white",
+    border: "2px solid white",
+    boxShadow: "5px 5px 0px  black",
+    fontSize: "1.2rem",
+    ":hover": {
+      backgroundColor: "#334f99",
+    },
+  },
+  big: {
+    fontSize: "1.75rem",
+  },
+});
+
+render() {
+  return (
+    <div
+      className={css([styles.container, big && styles.big, this.props.styles])}
+    >
+      Hello Scenic City Summit
+    </div>
+  );
+}

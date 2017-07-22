@@ -1,0 +1,6 @@
+render() {
+  return (<Container>
+    Hello Scenic City Summit!
+  </Container>
+  );
+}

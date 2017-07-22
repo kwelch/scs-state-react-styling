@@ -1,0 +1,11 @@
+const styles = require('./style.css');
+
+module.exports = function Container(text, big) {
+  const element = document.createElement('div');
+  element.appendChild(document.createTextNode(text));
+  element.className = styles.container;
+  if (big) {
+    element.className += ` ${styles.big}`;
+  }
+  return element;
+}
