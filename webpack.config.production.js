@@ -8,7 +8,7 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/component-styling/',
+    publicPath: '/state-react-styling/',
   },
   plugins: [
     new webpack.DefinePlugin({

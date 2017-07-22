@@ -409,13 +409,13 @@ export default class Presentation extends React.Component {
             Kyle Welch
           </Text>
           <Link
-            href="http://slides.krwelch.com/component-styling/"
+            href="http://slides.krwelch.com/state-react-styling/"
             margin=".5rem 0 0"
             textColor="tertiary"
             size={0.75}
             italic
           >
-            http://slides.krwelch.com/component-styling/
+            http://slides.krwelch.com/state-react-styling/
           </Link>
           <Layout style={{ marginTop: 100, justifyContent: "space-between" }}>
             <Fill>
