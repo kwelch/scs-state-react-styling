@@ -100,19 +100,13 @@ const ArrayList = ({ items, textColor, textSize, style }) => (
   </List>
 );
 
-const ImageSlide = ({ src, style, ...props }) => (
-  <Slide
-    {...props}
-    style={{
-      backgroundColor: "#f9f9f9",
-      backgroundImage: `url(${src})`,
-      backgroundRepeat: "no-repeat",
-      backgroundPosition: "center center",
-      backgroundSize: "contain",
-      ...style,
-    }}
-  />
-);
+const imageSlideStyle = (src) => ({
+  backgroundColor: "#f9f9f9",
+  backgroundRepeat: "no-repeat",
+  backgroundPosition: "center center",
+  backgroundSize: "contain",
+  backgroundImage: `url(${src})`,
+});
 
 export default class Presentation extends React.Component {
   render() {
@@ -123,8 +117,8 @@ export default class Presentation extends React.Component {
         theme={theme}
         progress="pacman"
       >
-        <ImageSlide src={images.intro} />
-        <ImageSlide src={images.about} />
+        <Slide transition={["zoom"]} style={imageSlideStyle(images.intro)} />
+        <Slide transition={["slide"]} style={imageSlideStyle(images.about)} />
         <Slide transition={["fade"]} bgColor="primary">
           <Notes>
             <ul>
