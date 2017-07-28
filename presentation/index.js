@@ -243,11 +243,11 @@ export default class Presentation extends React.Component {
           </Layout>
           <Link
             textSize={24}
-            padding="5rem auto 0"
+            padding="2rem auto 0"
             textColor="#696969"
             href="https://www.webpackbin.com/bins/-Kq6EIQauQV6A69K0JI-"
             target="_blank"
-            style={{ position: "absolute", bottom: "-100px", right: "-100px" }}
+            style={{ position: "absolute", bottom: "-50px", right: "-50px" }}
           >
             webpack bin
           </Link>

@@ -1,30 +1,19 @@
-createInput = (label) => {
-  const name = label.toLowerCase();
-  const error = this.state.error[name];
-  return (<Input
-    label={label}
-    name={name}
-    value={this.state[name]}
-    error={error}
-    onChange={this.onChange}
-  />);
-}
-
 render() {
   return (<Form>
     <Title>Contact Us</Title>
-    <Errors items={this.state.errors} />
-    {createInput('Name')}
-    {createInput('Email')}
-    <TextArea
-      label="Comments" 
-      name="comments" 
-      value={this.state.comments} 
-      onChange={this.onChange}
+    {/* TODO: Show error summary section */}
+    <Input label="Name" isRequired placeholder="John Doe"
+      value={this.state.name} error={errors.name}
     />
-    <Button
-      label="Submit"
-      onClick={this.submit}
+    <Input label="Phone" placeholder="555-555-5555"
+      value={this.state.phone} error={errors.phone}
     />
+    <Input label="Email" placeholder="example@email.com"
+      value={this.state.email} error={errors.email}
+    />
+    <Input label="Comments" isRequired multiline
+      value={this.state.comments} error={errors.comments}
+    />
+    <Button label="Submit" onClick={this.submit} />
   </Form>);
 }

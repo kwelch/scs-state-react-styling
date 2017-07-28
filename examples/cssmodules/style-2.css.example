@@ -1,21 +1,16 @@
 .title {
   /* style---title---RVy7q */
-  color: white;
+  color: white; padding: 0.3rem 1rem;
   background-color: #305a79;
-  padding: 0.3rem 1rem;
   border: 1px solid #334070;
   box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
 }
-
 .submitButton{
   /* style---submitButton---1u5h0 */
-  float:right;
+  float:right; font-size: 1.1rem;
   background-color: #305a79;
   border: 1px solid #334070;
   box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.3);
-  font-size: 1.1rem;
-  color: white;
-  margin: .25rem 0.5rem;
-  padding: .2rem 1rem;
-  box-sizing: border-box;
+  color: white; margin: .25rem 0.5rem;
+  padding: .2rem 1rem; box-sizing: border-box;
 }
