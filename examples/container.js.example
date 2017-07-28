@@ -1,6 +1,30 @@
+createInput = (label) => {
+  const name = label.toLowerCase();
+  const error = this.state.error[name];
+  return (<Input
+    label={label}
+    name={name}
+    value={this.state[name]}
+    error={error}
+    onChange={this.onChange}
+  />);
+}
+
 render() {
-  return (<Container>
-    Hello Scenic City Summit!
-  </Container>
-  );
+  return (<Form>
+    <Title>Contact Us</Title>
+    <Errors items={this.state.errors} />
+    {createInput('Name')}
+    {createInput('Email')}
+    <TextArea
+      label="Comments" 
+      name="comments" 
+      value={this.state.comments} 
+      onChange={this.onChange}
+    />
+    <Button
+      label="Submit"
+      onClick={this.submit}
+    />
+  </Form>);
 }

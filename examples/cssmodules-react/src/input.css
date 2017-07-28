@@ -1,0 +1,35 @@
+.container {
+  display:flex;
+  padding: .5rem;
+}
+
+.label {
+  width: 150px;
+}
+
+.textArea {
+  flex-direction:column;
+}
+
+.textArea textarea {
+  min-height: 4rem;
+}
+
+.required {
+  font-size: .8rem;
+  color: red;
+}
+
+.error input {
+  border-bottom: 2px solid red;
+}
+
+.error textarea {
+  border: 2px solid red;
+}
+
+.input {  
+  border: 1px solid #afafaf;
+  padding: .2rem;
+  box-shadow: .2rem .2rem .5rem rgba(0,0,0,0.1);
+}

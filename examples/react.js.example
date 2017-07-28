@@ -1,17 +1,39 @@
-function App(props) {
-  return (
-    <div>
-      <h1 style={{
-        color: '#f2621c',
-        textShadow: '2px 2px 0 black',
-        paddingBottom: 20,
-        borderBottom: '1px solid #f2621c',
-      }}>{props.title}</h1>
-      <h3>This is React!</h3>
-      <p>These slides are written in React.</p>
-      <i>Check out Spectacle!</i>
-    </div>
-  );
-}
+const ContactForm = ({name, phone, email, comments}) => {
+    return (<form method="post">
+        <fieldset>
+          <legend>Contact Us</legend>
+          Name: <input
+            required
+            placeholder="John Doe"
+            value={name}
+          />
+          Phone: <input
+            placeholder="555-555-5555"
+            value={phone}
+          />
+          Email: <input
+            placeholder="example@email.com"
+            value={email}
+          />
+          Comments: <textarea
+            required
+          >{comments}</textarea>
+          <button>
+            Submit
+          </button>
+        </fieldset>
+      </form>);
+};
 
-render(<App title="Hello SCS!" />, mountNode);
+const state = {
+  name: null,
+  email: null,
+  phone: null,
+  comments: null,
+  errors: {
+    name:'',
+    comments:''
+  }
+};
+
+render(<ContactForm {...state} />, mountNode);

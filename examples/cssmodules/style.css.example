@@ -1,12 +1,17 @@
-.container { /* .style---container---[hash] */
-  padding: 2rem;
-  color: white;
-  border: 2px solid white;
-  box-shadow: 5px 5px 0 black;
-  background-color: #f2621c;
-  font-size: 1.2rem;
+body:global {
+  /* selector: body */
+  background-color: #305a79;
+  font-family: Arial, sans-serif;
 }
 
-.big { /* .style---big---[hash] */
-  font-size: 1.75rem;
+.container {
+  /* selector: style---container---1_mx9 */
+  width: 300px;
+  margin: auto;
+}
+
+.fieldset {
+  /* selector: style---fieldset---2pcf1 */
+  background-color: white;
+  border: 1px solid #004070;
 }

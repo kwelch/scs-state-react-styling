@@ -50,7 +50,7 @@ const examples = {
   Sass: require("raw-loader!../examples/sass.example"),
   cssModules: {
     style: require("raw-loader!../examples/cssmodules/style.css.example"),
-    app: require("raw-loader!../examples/cssmodules/app.js.example"),
+    style2: require("raw-loader!../examples/cssmodules/style-2.css.example"),
   },
   react: require("raw-loader!../examples/react.js.example"),
   glamorous: require("raw-loader!../examples/glamorous.js.example"),
@@ -194,42 +194,6 @@ export default class Presentation extends React.Component {
             </Fill>
           </Layout>
         </Slide>
-        <Slide
-          transition={["spin"]}
-          bgColor="codePaneBg"
-          notes={`<ul>
-          <li>allow you to turn your stylesheet into an object of class names</li>
-          <li>styleshet can be css, less, sass</li>
-          <li>Processed with webpack or browserify, generates scoped class names</li>
-          <li>Explicit dependencies</li>
-          </ul>`}
-        >
-          <Image src={images.cssModulesLogo} width={200} />
-          <Layout>
-            <Fill>
-              <div className="filePane">
-                <Text textColor="primary">style.css</Text>
-                <CodePane lang="css" source={examples.cssModules.style} />
-              </div>
-            </Fill>
-            <Fill>
-              <div className="filePane">
-                <Text textColor="primary">app.js</Text>
-                <CodePane lang="js" source={examples.cssModules.app} />
-              </div>
-            </Fill>
-          </Layout>
-          <Link
-            textSize={24}
-            padding="5rem auto 0"
-            textColor="#696969"
-            href="https://www.webpackbin.com/bins/-KlJuBapiJHedN20gb5K"
-            target="_blank"
-            style={{ position: "absolute", bottom: "-100px", right: "-100px" }}
-          >
-            webpack bin
-          </Link>
-        </Slide>
         <Slide transition={["zoom"]} bgColor="codePaneBg">
           <Notes>
             <ul>
@@ -252,6 +216,41 @@ export default class Presentation extends React.Component {
             previewBackgroundColor="#cdcdcd"
             code={examples.react}
           />
+        </Slide>
+        <Slide
+          transition={["spin"]}
+          bgColor="codePaneBg"
+          notes={`<ul>
+          <li>allow you to turn your stylesheet into an object of class names</li>
+          <li>styleshet can be css, less, sass</li>
+          <li>Processed with webpack or browserify, generates scoped class names</li>
+          <li>Explicit dependencies</li>
+          </ul>`}
+        >
+          <Image src={images.cssModulesLogo} width={200} />
+          <Text textColor="primary">style.css</Text>
+          <Layout>
+            <Fill>
+              <div className="filePane">
+                <CodePane lang="css" source={examples.cssModules.style} />
+              </div>
+            </Fill>
+            <Fill>
+              <div className="filePane">
+                <CodePane lang="css" source={examples.cssModules.style2} />
+              </div>
+            </Fill>
+          </Layout>
+          <Link
+            textSize={24}
+            padding="5rem auto 0"
+            textColor="#696969"
+            href="https://www.webpackbin.com/bins/-Kq6EIQauQV6A69K0JI-"
+            target="_blank"
+            style={{ position: "absolute", bottom: "-100px", right: "-100px" }}
+          >
+            webpack bin
+          </Link>
         </Slide>
         <Slide bgColor="tertiary" transition={["fade"]}>
           <Notes>
@@ -298,8 +297,11 @@ export default class Presentation extends React.Component {
               <SmallListItem
                 key={i}
                 textColor={
-                  ["glamorous", "styled-components", "aphrodite"].includes(v) &&
-                    "primary"
+                  [
+                    "glamorous",
+                    "styled-components",
+                    //"aphrodite"
+                  ].includes(v) && "primary"
                 }
               >
                 - {v}
@@ -321,12 +323,12 @@ export default class Presentation extends React.Component {
             Source: https://github.com/MicheleBertoli/css-in-js
           </Link>
         </Slide>
-        <Slide bgColor="codePaneBg">
+        {/* <Slide bgColor="codePaneBg">
           <Heading lineHeight={1.25} textSize="52px" margin="0 auto 2rem">
             Aphrodite
           </Heading>
           <CodePane lang="js" source={examples.aphrodite} />
-        </Slide>
+        </Slide> */}
         <Slide bgColor="tertiary">
           <Heading
             lineHeight={1.25}
@@ -349,6 +351,16 @@ export default class Presentation extends React.Component {
               <CodePane lang="js" source={examples.container} />
             </Fill>
           </Layout>
+          <Link
+            textSize={24}
+            padding="5rem auto 0"
+            textColor="#696969"
+            href="https://www.webpackbin.com/bins/-Kq6EIYtLdyIkoktnxGk"
+            target="_blank"
+            style={{ position: "absolute", bottom: "-100px", right: "-100px" }}
+          >
+            webpack bin
+          </Link>
         </Slide>
         <Slide bgColor="codePaneBg">
           <Heading lineHeight={1.25} textSize="52px" margin="0 auto 2rem">
@@ -362,6 +374,16 @@ export default class Presentation extends React.Component {
               <CodePane lang="js" source={examples.container} />
             </Fill>
           </Layout>
+          <Link
+            textSize={24}
+            padding="5rem auto 0"
+            textColor="#696969"
+            href="https://www.webpackbin.com/bins/-Kq6EIhbS25RsgdG8Yyi"
+            target="_blank"
+            style={{ position: "absolute", bottom: "-100px", right: "-100px" }}
+          >
+            webpack bin
+          </Link>
         </Slide>
         <Slide>
           <Heading>Helpful Tools</Heading>
