@@ -42,6 +42,10 @@ const images = {
   scLogo: require("../assets/styled-components.png"),
   concerns: require("../assets/separation_of_concerns.jpg"),
   styledForm: require("../assets/css-styled-form.png"),
+  state: require("../assets/state.png"),
+  props: require("../assets/props.png"),
+  factory: require("../assets/factory.png"),
+  eyes: require("../assets/eyes.png"),
 };
 
 const examples = {
@@ -190,6 +194,38 @@ export default class Presentation extends React.Component {
             <Fill>
               <Appear>
                 <CodePane lang="css" source={examples.Sass} />
+              </Appear>
+            </Fill>
+          </Layout>
+        </Slide>
+        <Slide transition={["slide"]} style={{ backgroundColor: "#f9f9f9" }}>
+          <Layout style={{ margin: "-2rem 0" }}>
+            <Fill>
+              <Appear>
+                <div>
+                  <Text style={{ zIndex: 10 }}>Props</Text>
+                  <Image src={images.props} width={400} />
+                </div>
+              </Appear>
+            </Fill>
+            <Fill>
+              <Appear>
+                <div>
+                  <Text style={{ zIndex: 10 }}>State</Text>
+                  <Image src={images.state} width={400} />
+                </div>
+              </Appear>
+            </Fill>
+          </Layout>
+          <Layout style={{ flexDirection: "column" }}>
+            <Fill style={{ margin: "-4rem 0" }}>
+              <Appear>
+                <Image src={images.factory} width={400} />
+              </Appear>
+            </Fill>
+            <Fill style={{ margin: "-3rem 0" }}>
+              <Appear>
+                <Image src={images.eyes} width={400} />
               </Appear>
             </Fill>
           </Layout>
